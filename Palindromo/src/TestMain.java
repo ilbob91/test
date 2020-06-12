@@ -16,17 +16,17 @@ public class TestMain {
 
 	}
 
-	public static boolean isPalindromo(String ss) {
+	public static boolean isPalindromo(String frase) {
 		
-		ss = ss.replaceAll("\\s", "");
-		int i = ss.length() - 1;
-		int j = 0;
-			while (i > j) {
-				if (ss.charAt(i) != ss.charAt(j)) {
+		frase = frase.replaceAll("\\s", "");
+		int ultimaLettera = frase.length() - 1;
+		int primaLettera = 0;
+			while (ultimaLettera > primaLettera) {
+				if (frase.charAt(ultimaLettera) != frase.charAt(primaLettera)) {
 					return false;
 				}
-				i--;
-				j++;
+				ultimaLettera--;
+				primaLettera++;
 			}
 			return true;
 		}
